@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <h3>Documents</h3>
-    <%= form.collection_check_boxes :document_ids, Document.all, :id, :name do |b| %>
+    <h3>Favorite Books</h3>
+    <%= form.collection_check_boxes :document_ids, Document.all, :id, :title do |b| %>
       <div class="document-checkbox">
         <%= b.check_box %>
         <%= b.label %>
