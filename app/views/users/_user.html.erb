@@ -4,4 +4,20 @@
     <%= user.name %>
   </p>
 
+  <div class="favorite-books">
+    <strong>Favorite Books:</strong>
+    <% if user.documents.any? %>
+      <ul>
+        <% user.documents.each do |book| %>
+          <li>
+            <strong><%= book.title %></strong>
+            <br>
+            <em><%= book.content %></em>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p><em>No favorite books selected yet.</em></p>
+    <% end %>
+  </div>
 </div>
